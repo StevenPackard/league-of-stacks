@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(https://pbs.twimg.com/media/CBH_Bm2UwAAqQaR.png);
+  background-position: center;
+  background-size: cover;
+}
+
+main{
+  flex-grow: 1;
+}
+
+
+.picture-minion{
+  height: 400px;
+  width: auto;
+}
+.picture-medium{
+  height: 500px;
+  width: auto;
+}

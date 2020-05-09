@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League of Stacks</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center text-light">
+        <h1>LEAGUE OF CLICKING</h1>
+        <p>You must help nasus get stacks. Click on the minion to start farming!</p>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Game -->
+  <main class="container-fluid">
+    <!-- Minion -->
+    <div class="row d-flex text-center">
+      <div class="col-6">
+        <img class="picture-medium"
+          src="https://vignette.wikia.nocookie.net/leagueoflegends/images/b/bf/Nasus_Render.png/revision/latest?cb=20190119234048"
+          alt="">
+      </div>
+      <div class="col-6 pt-5">
+        <img class="picture-minion" onclick="attack()" src="meleeminion.png" alt="">
+      </div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-12 text-center text-light">
+        <h1>Total Stacks:<span id="goldCollected"></span></h1>
+      </div>
+    </div>
+    <div class="row text-light text-center">
+      <div class="col-6">
+        <h1>Purchase Items</h1>
+        <h2>Item Multiplier:<span id="itemMultiplier"></span></h2>
+        <button class="btn btn-primary" id="hurricaneItem" onclick="buyItem(`hurricane`)">Hurricane</button>
+        <button class="btn btn-primary" id="ludensItem" onclick="buyItem(`ludens`)">Ludens</button>
+      </div>
+      <div class="col-6">
+        <h1>Purchase Buffs</h1>
+        <h2>Buff Multiplier:<span id="buffMultiplier"></span></h2>
+        <button class="btn btn-primary" id="supportBuff" onclick="buyBuff(`support`)">Red Buff</button>
+        <button class="btn btn-primary" id="baronBuff" onclick="buyBuff(`baron`)">Baron</button>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

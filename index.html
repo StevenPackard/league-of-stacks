@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
   <title>League of Clicking</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="mobile-background">
   <header class="container-fluid">
     <div class="row d-flex justify-content-center">
       <div class="col-6 text-center text-light mt-2">
         <img class="picture-logo" src="https://i.dlpng.com/static/png/353701_preview.png" alt="">
-        <h4 class="splitter">You must help Nasus get stacks. Click on the minion to start farming!</h4>
+        <h4 class="splitter mobile-hide">You must help Nasus get stacks. Click on the minion to start farming!</h4>
       </div>
     </div>
   </header>
@@ -22,46 +22,49 @@
   <!-- Game -->
   <main class="container-fluid">
     <div class="row d-flex text-center text-light">
-      <div class="col-6 pt-2">
+      <div class="col-6 pt-2 mobile-hide">
         <h1>Nasus</h1>
       </div>
-      <div class="col-6 pt-2">
+      <div class="col-12 col-md-6 pt-2">
         <h1>Minion</h1>
       </div>
     </div>
     <div class="row d-flex text-center">
-      <div class="col-6 pr-5">
+      <div class="col-6 pr-5 mobile-hide">
         <img class="picture-medium"
           src="https://vignette.wikia.nocookie.net/leagueoflegends/images/b/bf/Nasus_Render.png/revision/latest?cb=20190119234048"
           alt="">
       </div>
-      <div class="col-6">
-        <img class="picture-minion picture-move" onclick="attack()" src="meleeminion.png" alt="">
+      <div class="col-12 col-md-6">
+        <img class="picture-minion picture-move mobile-pad" onclick="attack()" src="meleeminion.png" alt="">
       </div>
     </div>
     <div class="row d-flex justify-content-around text-center">
-      <div class="col-4 text-center scoreboard mb-3">
+      <div class="col-12 col-md-4 text-center scoreboard mb-3">
         <h1 class="splitter pb-1">Total Gold:<span id="goldCollected"></span></h1>
         <h2>Click Multiplier:<span id="itemMultiplier"></span></h2>
         <h2> Passive Gold:<span id="buffMultiplier"></span>/3s</h2>
       </div>
     </div>
     <div class="row d-flex text-light text-center justify-content-around">
-      <div class="col-4">
+      <div class="col-12 col-md-4">
         <h1 class="item-box">Purchase Items</h1>
-        <button class="btn btn-secondary mx-3" id="hurricaneItem" onclick="buyItem(`hurricane`)"><img
+        <button class="btn btn-secondary mx-3 mobile-margin" id="hurricaneItem" onclick="buyItem(`hurricane`)"><img
             class="picture-small" src="https://red3141.github.io/UrfChallenge2015/img/nasus.png" alt="">$<span
             id="hurricanePrice"></span></button>
-        <button class="btn btn-secondary mx-3" id="ludensItem" onclick="buyItem(`ludens`)"><img class="picture-small"
+        <button class="btn btn-secondary mx-3 mobile-margin" id="ludensItem" onclick="buyItem(`ludens`)"><img
+            class="picture-small"
             src="https://vignette.wikia.nocookie.net/leagueoflegends/images/4/4d/Infinity_Edge_item_old.png/revision/latest/top-crop/width/220/height/220?cb=20180507193702"
             alt="">$<span id="ludensPrice"></span></button>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-md-4">
         <h1 class="item-box">Purchase Buffs</h1>
-        <button class="btn btn-secondary mx-3" id="supportBuff" onclick="buyBuff(`support`)"><img class="picture-small"
+        <button class="btn btn-secondary mx-3 mobile-margin" id="supportBuff" onclick="buyBuff(`support`)"><img
+            class="picture-small"
             src="https://2.bp.blogspot.com/-4B5Ywq4Xiis/XLYi_KDO84I/AAAAAAABRgM/3Q513nJtH1UdCN_j60FofZ0E5cfAoBNZACLcBGAs/s1600/4086.jpg"
             alt="">$<span id="supportPrice"></span></button>
-        <button class="btn btn-secondary mx-3" id="baronBuff" onclick="buyBuff(`baron`)"><img class="picture-small"
+        <button class="btn btn-secondary mx-3 mobile-margin" id="baronBuff" onclick="buyBuff(`baron`)"><img
+            class="picture-small"
             src="https://vignette.wikia.nocookie.net/leagueoflegends/images/1/1e/Baron_Nashor_profileicon.png/revision/latest?cb=20170504213235"
             alt="">$<span id="baronPrice"></span></button>
       </div>

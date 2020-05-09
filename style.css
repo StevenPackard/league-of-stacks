@@ -55,3 +55,28 @@ main{
 .picture-move{
   padding-top: 75px;
 }
+
+
+@media only screen and (max-width: 600px){
+
+  .mobile-background{
+    background-image: url(https://wallpaperaccess.com/full/1155050.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .mobile-hide{
+    display: none;
+  }
+
+  .mobile-pad{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .mobile-margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}

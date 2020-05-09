@@ -5,6 +5,7 @@ body{
   background-image: url(https://pbs.twimg.com/media/CBH_Bm2UwAAqQaR.png);
   background-position: center;
   background-size: cover;
+  text-shadow: 2px 2px black;
 }
 
 main{
@@ -13,10 +14,44 @@ main{
 
 
 .picture-minion{
-  height: 400px;
+  height: 300px;
   width: auto;
 }
 .picture-medium{
-  height: 500px;
+  height: 400px;
   width: auto;
+}
+.picture-small{
+  height: 100px;
+  width: 100px;
+}
+
+.picture-logo{
+  height: 75px;
+  width: 75px;
+}
+
+
+.scoreboard{
+  border: 5px solid black;
+  background-color: rgb(82, 82, 82);
+  color: rgb(243, 207, 0);
+}
+.item-box{
+  border: 5px solid black;
+  background-color: rgb(82, 82, 82);
+  color: white;
+}
+
+.splitter{
+  border-bottom: 5px solid black;
+}
+
+.border-thin{
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.picture-move{
+  padding-top: 75px;
 }

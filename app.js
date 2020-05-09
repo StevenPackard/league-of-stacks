@@ -38,6 +38,10 @@ function attack() {
 // Function to update gold on screen and disable buttons if you dont have enough gold
 function update() {
   document.getElementById("goldCollected").innerText = gold.toString()
+  document.getElementById("hurricanePrice").innerText = clickUpgrades['hurricane'].price.toString()
+  document.getElementById("ludensPrice").innerText = clickUpgrades['ludens'].price.toString()
+  document.getElementById("supportPrice").innerText = autoUpgrades['support'].price.toString()
+  document.getElementById("baronPrice").innerText = autoUpgrades['baron'].price.toString()
 
   // Variables and statement to disable buttons if not enough gold
   let cantBuyHurricane = document.getElementById("hurricaneItem")

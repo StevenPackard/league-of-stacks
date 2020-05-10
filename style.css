@@ -11,6 +11,9 @@ body{
 main{
   flex-grow: 1;
 }
+img{
+  user-select: none;
+}
 
 /* picture utility classes */
 .picture-minion{

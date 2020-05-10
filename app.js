@@ -32,11 +32,13 @@ let autoUpgrades = {
 // Function to attack and add gold
 function attack() {
   gold += (1 * itemTotal)
+  // window.localStorage.setItem("playerGold", JSON.stringify(gold))
   update()
 }
 
 // Function to update gold on screen and disable buttons if you dont have enough gold
 function update() {
+  // loadData()
   document.getElementById("goldCollected").innerText = gold.toString()
   document.getElementById("hurricanePrice").innerText = clickUpgrades['hurricane'].price.toString()
   document.getElementById("ludensPrice").innerText = clickUpgrades['ludens'].price.toString()
@@ -74,6 +76,7 @@ function buyItem(itemName) {
   document.getElementById("itemMultiplier").innerText = itemTotal.toString()
   gold -= clickUpgrades[itemName].price
   clickUpgrades[itemName].price *= 2
+  // window.localStorage.setItem("playerItems", JSON.stringify(itemTotal))
   update()
 }
 
@@ -84,6 +87,7 @@ function buyBuff(buffName) {
   document.getElementById("buffMultiplier").innerText = buffTotal.toString()
   gold -= autoUpgrades[buffName].price
   autoUpgrades[buffName].price *= 2
+  // window.localStorage.setItem("playerBuffs", JSON.stringify(buffTotal))
   update()
 }
 
@@ -94,6 +98,7 @@ function collectBuffs() {
     total += (autoUpgrades[key].quantity * autoUpgrades[key].multiplier)
   }
   gold += total;
+  // window.localStorage.setItem("playerGold", JSON.stringify(gold))
   update()
 }
 
@@ -101,6 +106,22 @@ function collectBuffs() {
 function startInterval() {
   setInterval(collectBuffs, 3000)
 }
+
+
+// function loadData() {
+//   let currentGold = window.localStorage.getItem("playerGold")
+//   let currentItems = window.localStorage.getItem("playerItems")
+//   let currentBuffs = window.localStorage.getItem("playerBuffs")
+//   if (currentGold) {
+//     gold = Number(currentGold)
+//   }
+//   if (currentItems) {
+//     itemTotal = Number(currentItems)
+//   }
+//   if (currentBuffs) {
+//     buffTotal = Number(currentBuffs)
+//   }
+// }
 
 // Update and Start Interval when page loads
 update()

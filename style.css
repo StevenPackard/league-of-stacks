@@ -1,3 +1,4 @@
+/* main body utility classes */
 body{
   display: flex;
   flex-direction: column;
@@ -7,12 +8,11 @@ body{
   background-size: cover;
   text-shadow: 2px 2px black;
 }
-
 main{
   flex-grow: 1;
 }
 
-
+/* picture utility classes */
 .picture-minion{
   height: 300px;
   width: auto;
@@ -25,13 +25,15 @@ main{
   height: 100px;
   width: 100px;
 }
-
 .picture-logo{
   height: 75px;
   width: 75px;
 }
+.picture-move{
+  padding-top: 75px;
+}
 
-
+/* scoreboard and items */
 .scoreboard{
   border: 5px solid black;
   background-color: rgb(82, 82, 82);
@@ -42,19 +44,15 @@ main{
   background-color: rgb(82, 82, 82);
   color: white;
 }
-
+/* borders */
 .splitter{
   border-bottom: 5px solid black;
 }
-
 .border-thin{
   border: 2px solid black;
   border-radius: 2px;
 }
 
-.picture-move{
-  padding-top: 75px;
-}
 
 
 @media only screen and (max-width: 850px){

@@ -40,6 +40,12 @@
       </div>
     </div>
     <div class="row d-flex justify-content-around text-center">
+      <div class="col-12 col-md-4 mb-3 pt-3 scoreboard">
+        <h5>Siphoning Strike Total:<span id="hurricaneQuant"></span></h5>
+        <h5>Infinity Edge Total:<span id="ludensQuant"></span></h5>
+        <h5>Red Buff Total:<span id="supportQuant"></span></h5>
+        <h5>Baron Buff Total:<span id="baronQuant"></span></h5>
+      </div>
       <div class="col-12 col-md-4 text-center scoreboard mb-3">
         <h1 class="splitter pb-1">Total Gold:<span id="goldCollected"></span></h1>
         <h2>Click Multiplier:<span id="itemMultiplier"></span></h2>
@@ -47,12 +53,7 @@
       </div>
     </div>
     <div class="row d-flex text-light text-center justify-content-around">
-      <div class="col-9 item-box mb-2">
-        <h5>Siphoning Strike Total:<span id="hurricaneQuant"></span></h5>
-        <h5>Infinity Edge Total:<span id="ludensQuant"></span></h5>
-        <h5>Red Buff Total:<span id="supportQuant"></span></h5>
-        <h5>Baron Buff Total:<span id="baronQuant"></span></h5>
-      </div>
+
       <div class="col-12 col-md-4">
         <h1 class="item-box">Purchase Items</h1>
         <button class="btn btn-secondary mx-3 mobile-margin" id="hurricaneItem" onclick="buyItem(`hurricane`)"><img
